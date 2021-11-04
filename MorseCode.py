@@ -20,10 +20,14 @@ def morseCodeToLetters(phrase_1):
 	if phrase_1 == "":
 		print("")
 		return
+	'''This chart is different to the chart that was created as a global variable reason being that the space character is defined differently when decoding hence i defined it again'''	
 	morse_chart2 = {"A": ".-", "B": "-...","C": "-.-.","D": "-..","E": ".","F": "..-.","G": "--.","H": "....","I": "..","J": ".---","K": "-.-","L": ".-..","M": "--","N": "-.","O": "---","P": ".--.","Q": "--.-","R": ".-.","S": "...","T": "-","U": "..-","V": "...-","W": ".--","X": "-..-","Y": "-.--","Z": "--..","&": ".-...","'": ".----.","@":".--.-.",")":"-.--.-","(":"-.--.",":":"---...",",":"--..--","=":"-...-","!":"-.-.--",".":".-.-.-","-":"-....-","×":"-..-","%":"----- -..-. -----","+":".-.-.",'"':".-..-.","?":"..--..","/":"-..-."," ": "/"}
+	'''morse_decoded is a variable to store the decoded string''' 
 	morse_decoded = ""
+	'''list_of_morse_values is a variable to store the morse code string as an array of characters'''
 	list_of_morse_values = phrase_1.split();
 	morse_items = morse_chart2.items()
+
 	for i in list_of_morse_values:
 		for key, value in morse_chart2.items():
 			if i == value:
